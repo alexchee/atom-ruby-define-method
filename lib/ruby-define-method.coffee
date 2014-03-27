@@ -7,10 +7,14 @@ module.exports =
     cursor = editor.getCursor()
     method_name = cursor.getCurrentBufferLine().trim()
     selection = editor.getSelection()
-    editor.setTextInBufferRange(cursor.getCurrentLineBufferRange(), "def " + method_name + "(var)\n\t\nend")
-    selection.selectUp(2)
-    editor.autoIndentSelectedRows()
+    editor.deleteLine()
+    editor.insertText("def " + method_name + "(var)\n\t\nend\n", {
+      autoIndent: true
+      autoIndentNewline: true
+      autoDecreaseIndent: true
+      undo: 'skip'
+    })
+    cursor.moveUp(3)
     cursor.moveToEndOfLine()
     cursor.moveLeft()
     selection.selectToBeginningOfWord()
-    
