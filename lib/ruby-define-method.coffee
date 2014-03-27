@@ -9,12 +9,10 @@ module.exports =
     selection = editor.getSelection()
     editor.deleteLine()
     editor.insertNewlineAbove()
-    editor.insertText("def " + method_name + "(var)\n\t\n")
-    editor.insertText("end")
-    cursor.moveUp(2)
+    editor.insertText("def " + method_name + "(var)\n\t\nend")
+    selection.selectUp(2)
+    editor.autoIndentSelectedRows()
     cursor.moveToEndOfLine()
     cursor.moveLeft()
-    cursor.moveToBeginningOfWord()
-    selection.selectWord()
-    
+    selection.selectToBeginningOfWord()
     
