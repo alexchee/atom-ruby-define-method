@@ -11,7 +11,6 @@ git clone git@github.com:alexchee/atom-ruby-define-method.git ~/.atom/packages/r
 ```
 
 TODO:
- * Better way to Align text with indentation, so it wouldn't have the steps of each text in the buffer
  * Scope command to only ruby files, [when atom has built-in support](http://discuss.atom.io/t/how-do-i-scope-a-keymap-to-a-grammar/3842) or get this working https://github.com/tcarlsen/atom-keymap-plus
  * specs 
  * maybe add other Ruby Textmate commands

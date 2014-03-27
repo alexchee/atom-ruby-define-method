@@ -7,7 +7,7 @@ module.exports =
     cursor = editor.getCursor()
     method_name = cursor.getCurrentBufferLine().trim()
     selection = editor.getSelection()
-    editor.deleteLine()
+    selection.selectLine()
     editor.insertText("def " + method_name + "(var)\n\t\nend\n", {
       autoIndent: true
       autoIndentNewline: true
