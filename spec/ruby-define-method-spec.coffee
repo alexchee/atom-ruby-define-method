@@ -1,3 +1,4 @@
+{$, EditorView, WorkspaceView} = require 'atom'
 RubyDefineMethod = require '../lib/ruby-define-method'
 
 # Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
@@ -10,8 +11,10 @@ describe "RubyDefineMethod", ->
 
   beforeEach ->
     atom.workspaceView = new WorkspaceView
-    activationPromise = atom.packages.activatePackage('rubyDefineMethod')
+    activationPromise = atom.packages.activatePackage('ruby-define-method')
 
   describe "when the ruby-define-method:new_instance_method event is triggered", ->
     it "wraps text on line around def and end", ->
+
+      
       
