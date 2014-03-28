@@ -1,5 +1,10 @@
+keymap = require('atom-keymap-plus');
+
 module.exports =
   activate: (state) ->
+    'use strict'
+    
+    keymap.setFileClasses()
     atom.workspaceView.command "ruby-define-method:new_instance_method", => @new_instance_method()
 
   new_instance_method: ->

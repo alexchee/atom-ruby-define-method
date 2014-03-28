@@ -3,12 +3,12 @@
   "main": "./lib/ruby-define-method",
   "version": "0.0.1",
   "description": "Like Textmate, shortcut to declare a ruby method with shift+enter",
-  "activationEvents": ["ruby-define-method:new_instance_method"],
   "repository": "https://github.com/alexchee/atom-ruby-define-method",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
   },
   "dependencies": {
+    "atom-keymap-plus": ">0.1.2"
   }
 }
