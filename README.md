@@ -7,7 +7,7 @@ Please note, I'm still learning my way around Atom and the code is probably horr
 
 To change the keybinding:
 ```
-'.editor.ruby':
+'.editor[data-grammar~=ruby]':
   'shift-enter': 'ruby-define-method:new_instance_method'
 ```
 
