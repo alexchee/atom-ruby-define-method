@@ -1,4 +1,4 @@
-{$, EditorView, WorkspaceView} = require 'atom'
+{$, TextEditorView, View} = require 'atom-space-pen-views'
 RubyDefineMethod = require '../lib/ruby-define-method'
 
 # Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
