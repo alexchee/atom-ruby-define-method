@@ -2,11 +2,12 @@ module.exports =
   activate: (state) ->
     'use strict'
     
-    atom.workspaceView.command "ruby-define-method:new_instance_method", => @new_instance_method()
+    atom.commands.add 'atom-workspace', "ruby-define-method:new_instance_method", => @new_instance_method()
 
   new_instance_method: ->
-    editor = atom.workspace.getActiveEditor()
-    cursor = editor.getCursor()
+    editor = atom.workspace.getActiveTextEditor()
+    editorElement = atom.views.getView(editor)
+    cursor = editor.getLastCursor()
     method_name = cursor.getCurrentBufferLine().trim()
     selection = editor.getSelection()
     selection.selectLine()

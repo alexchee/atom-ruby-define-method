@@ -6,7 +6,9 @@
   "repository": "https://github.com/alexchee/atom-ruby-define-method",
   "license": "MIT",
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">=0.x.0 <2.0.0"
   },
-  "dependencies": {}
+  "dependencies":  {
+    "atom-space-pen-views": "^2.0.3"
+  }
 }
