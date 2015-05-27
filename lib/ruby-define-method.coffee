@@ -9,7 +9,7 @@ module.exports =
     editorElement = atom.views.getView(editor)
     cursor = editor.getLastCursor()
     method_name = cursor.getCurrentBufferLine().trim()
-    selection = editor.getSelection()
+    selection = editor.getLastSelection()
     selection.selectLine()
     editor.insertText("def " + method_name + "(var)\n\t\nend\n", {
       autoIndent: true
